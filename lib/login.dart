@@ -2,6 +2,8 @@ import 'package:farmsmart/signup.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -66,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
-                      padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                      padding:const  EdgeInsets.symmetric(horizontal: 100, vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -76,9 +78,9 @@ class LoginScreen extends StatelessWidget {
                   TextButton(
                   onPressed: () {
                   // Handle signup action
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUpScreen()));
                   },
-                  child: Text(
+                  child: const Text(
                   'Don\'t have an account? Sign up',
                   style: TextStyle(color: Colors.white),
                   ),

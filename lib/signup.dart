@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: const Text('Sign Up'),
         backgroundColor: Colors.green[700],
       ),
       body: Padding(
@@ -33,7 +35,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Username',
@@ -44,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Phone Number',
@@ -56,7 +58,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 keyboardType: TextInputType.phone,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
@@ -68,7 +70,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -80,19 +82,19 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
                   // Handle sign-up action
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green[700],
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: Text('Sign Up'),
+                child:const  Text('Sign Up'),
               ),
             ],
           ),
