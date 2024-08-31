@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class FarmerHome extends StatelessWidget {
   const FarmerHome({super.key});
 
@@ -9,7 +7,7 @@ class FarmerHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Color.fromARGB(255, 146, 238, 151),
         title: const Text(
           'FarmSmart',
           style: TextStyle(
@@ -25,35 +23,40 @@ class FarmerHome extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 40.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20.0),
-                child: Image.asset(
-                  'assets/image/homefarmer.jpg',
-                  height: 150,
-                  fit: BoxFit.cover,
-                )
-
-              ),
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Image.asset(
+                    'assets/image/homefarmer.jpg',
+                    height: 200,
+                    fit: BoxFit.cover,
+                  )),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                InkWell(onTap: (){},
-                    child: buildIconButton(Icons.trending_up, 'Trending Rates')
-                ),
-                InkWell(onTap: (){},
-                    child: buildIconButton(Icons.add_box, 'Post Item')
-                ),
-                InkWell(onTap: (){},
-                    child: buildIconButton(Icons.list, 'Products List')),
-              ],
+            Container(
+              margin: const EdgeInsets.only(top: 100.0), // Adjust as needed
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: buildIconButton(Icons.trending_up, 'Trending Rates'),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: buildIconButton(Icons.add, 'Post Item'),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: buildIconButton(Icons.list, 'Products List'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.greenAccent,
+        color: Color.fromARGB(255, 146, 238, 151),
         shape: CircularNotchedRectangle(),
         notchMargin: 8.0,
         child: Padding(
@@ -62,12 +65,12 @@ class FarmerHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               IconButton(
-                icon: const Icon(Icons.home),
+                icon: const Icon(Icons.home, size: 35),
                 onPressed: () {},
               ),
               const SizedBox(width: 40), // The dummy child
               IconButton(
-                icon: const Icon(Icons.person),
+                icon: const Icon(Icons.person, size: 35),
                 onPressed: () {},
               ),
             ],
@@ -75,9 +78,13 @@ class FarmerHome extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromARGB(255, 9, 151, 14),
         onPressed: () {},
-        child: const Icon(Icons.add),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+          size: 40,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -87,10 +94,12 @@ class FarmerHome extends StatelessWidget {
     return Column(
       children: [
         CircleAvatar(
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: Color.fromARGB(255, 146, 238, 151),
+          radius: 30,
           child: Icon(
             icon,
             color: Colors.green,
+            size: 50,
           ),
         ),
         const SizedBox(height: 8.0),

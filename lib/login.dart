@@ -15,7 +15,6 @@ class LoginScreen extends StatelessWidget {
               image: DecorationImage(
                 image: AssetImage('assets/image/1.png'),
                 fit: BoxFit.cover,
-
               ),
             ),
           ),
@@ -68,7 +67,8 @@ class LoginScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
-                      padding:const  EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 100, vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -76,14 +76,17 @@ class LoginScreen extends StatelessWidget {
                     child: const Text('Login'),
                   ),
                   TextButton(
-                  onPressed: () {
-                  // Handle signup action
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUpScreen()));
-                  },
-                  child: const Text(
-                  'Don\'t have an account? Sign up',
-                  style: TextStyle(color: Colors.white),
-                  ),
+                    onPressed: () {
+                      // Handle signup action
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignUpScreen()));
+                    },
+                    child: const Text(
+                      'Don\'t have an account? Sign up',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   )
                 ],
               ),
