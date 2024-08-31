@@ -1,3 +1,4 @@
+import 'package:farmsmart/farmerHome.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -85,6 +86,8 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const FarmerHome()));
+
                   // Handle sign-up action
                 },
                 style: ElevatedButton.styleFrom(

@@ -39,9 +39,14 @@ class FarmerHome extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                buildIconButton(Icons.trending_up, 'Trending Rates'),
-                buildIconButton(Icons.add_box, 'Post Item'),
-                buildIconButton(Icons.list, 'Products List'),
+                InkWell(onTap: (){},
+                    child: buildIconButton(Icons.trending_up, 'Trending Rates')
+                ),
+                InkWell(onTap: (){},
+                    child: buildIconButton(Icons.add_box, 'Post Item')
+                ),
+                InkWell(onTap: (){},
+                    child: buildIconButton(Icons.list, 'Products List')),
               ],
             ),
           ],
@@ -57,12 +62,12 @@ class FarmerHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {},
               ),
-              SizedBox(width: 40), // The dummy child
+              const SizedBox(width: 40), // The dummy child
               IconButton(
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 onPressed: () {},
               ),
             ],
@@ -72,7 +77,7 @@ class FarmerHome extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
         onPressed: () {},
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
