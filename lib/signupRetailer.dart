@@ -1,9 +1,10 @@
 import 'package:farmsmart/consumer.dart';
 import 'package:farmsmart/farmerHome.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+class SignUpRetailerScreen extends StatelessWidget {
+  const SignUpRetailerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +19,13 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.volume_up,
-                      color: Colors.green[700], size: 30), // Speaker icon
-                  SizedBox(width: 10),
-                  Text(
-                    'Create an Account',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green[700],
-                    ),
-                  ),
-                ],
+              Text(
+                'Create an Account',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green[700],
+                ),
               ),
               SizedBox(height: 20),
               TextField(
@@ -95,8 +88,10 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FarmerHome()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ConsumerScreen()));
 
                   // Handle sign-up action
                 },
@@ -108,14 +103,7 @@ class SignUpScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.volume_up, color: Colors.white), // Speaker icon
-                    SizedBox(width: 10),
-                    const Text('Sign Up'),
-                  ],
-                ),
+                child: const Text('Sign Up'),
               ),
             ],
           ),

@@ -1,9 +1,8 @@
-import 'package:farmsmart/registerAs.dart';
 import 'package:farmsmart/signup.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginRetailerScreen extends StatelessWidget {
+  const LoginRetailerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,24 +29,13 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text(
-                        'Login',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Icon(
-                        Icons.volume_up, // Speaker icon
-                        color: Colors.white,
-                        size: 32,
-                      ),
-                    ],
+                  const Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 40),
                   TextField(
@@ -79,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                       // add splash screen info (for farmer)
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 6, 81, 6),
+                      backgroundColor: Colors.blue,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 100, vertical: 15),
                       shape: RoundedRectangleBorder(
@@ -88,29 +76,17 @@ class LoginScreen extends StatelessWidget {
                     ),
                     child: const Text('Login'),
                   ),
-                  const SizedBox(height: 20),
                   TextButton(
                     onPressed: () {
                       // Handle signup action
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RegisterScreen()));
+                              builder: (context) => const SignUpScreen()));
                     },
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Text(
-                          'Don\'t have an account? Sign up',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        const SizedBox(width: 10),
-                        Icon(
-                          Icons.volume_up, // Speaker icon
-                          color: Colors.white,
-                          size: 24,
-                        ),
-                      ],
+                    child: const Text(
+                      'Don\'t have an account? Sign up',
+                      style: TextStyle(color: Colors.white),
                     ),
                   )
                 ],
